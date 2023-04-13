@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+    <head>
+        <title>Inventory List</title>
+    </head>
+    <body>
+        <input type="number" name="item_count" id="item_count" placeholder="count"/>
+        <input type="button" name="data_add" id="data_add" value="add" onClick="add_item()"/><br><br>
+        <table border="2">
+            <thead>
+                <tr>
+                    <th>sno</th>
+                    <th>count</th>
+                </tr>
+            </thead>
+            <tbody id="item_list"></tbody>
+        </table><br>
+        <input type="button" name="data_add" id="data_add" value="total" onClick="total()"/><br><br>
+        <label>Total:<span id="t"></span> </label>
+        <script>
+            var item_list = [];
+            function add_item(){
+                var item_count = parseInt(document.getElementById('item_count').value);
+                item_list.push(item_count);
+                var s = '';
+                var i=0;
+                item_list.forEach(function(value,index){
+                    i+=1;
+                    s += '<tr><td>'+i+'</td>';
+                    s += '<td>'+item_list[index]+'</td>';
+                    s += '</tr>';
+                })
+                document.getElementById('item_list').innerHTML = s;
+            }
+
+           
+
+            function total(){
+                var tot = 0;
+                for(let i = 0;i< item_list.length;i++){
+                    tot += item_list[i];
+                }
+                document.getElementById("t").innerText = tot;
+            }
+
+        </script>
+    </body>
+</html>

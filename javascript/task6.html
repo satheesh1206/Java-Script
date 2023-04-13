@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Object Properties</h2>
+
+<p>You can delete object properties with the delete keyword.</p>
+
+<p id="demo"></p>
+
+<script>
+var person = {
+  firstname: "John",
+  lastname: "Doe",
+  age: 50,
+  eyecolor: "blue"
+};
+
+delete person.age;
+document.getElementById("demo").innerHTML =
+person.firstname + " is " + person.age + " years old.";
+</script>
+
+</body>
+</html>
+
+
+
+<!-- <input type="text" name="item" id="item" value="" placeholder="Enter your name"/>
+    <input type="button" name="item" id="item" value="Total"/>
+    <input type="button" name="data" id="data" value="add"/><br>
+
+
+    
+    <script>
+    
+    
+
+    
+    var inventory = [
+  { name: 'Item 1', quantity: 10, price: 5.99 },
+  { name: 'Item 2', quantity: 5, price: 10.99 },
+  { name: 'Item 3', quantity: 2, price: 25.99 }
+];
+
+console.log(inventory[0].name); // "Item 1"
+console.log(inventory[1].quantity); // 5
+console.log(inventory[2].price); // 25.99
+
+inventory[1].quantity = 7;
+inventory[2].price = 29.99;
+inventory.push({ name: 'Item 4', quantity: 3, price: 12.99 });
+inventory.splice(1, 1); // removes the second item in the array
+
+
+    var iteam=[ 10,20,30,30,20];
+    iteam.forEach(function(value,index)
+    {
+        console.log('postion'+" "+index+'value'+" "+value+add);
+    });
+
+
+     var a=[10,20,40,30];
+     var sum=0
+     a.forEach((value)=>(sum+=value));
+     console.log(sum)
+
+
+</script>
+
+</body>
+</html> -->

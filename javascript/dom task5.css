@@ -1,0 +1,15 @@
+.bo{
+    background-color: brown;
+}
+.dn{
+    background-color: chocolate;
+    width: 350px;
+    height: 400px;
+    margin-left: 40%;
+    margin-top: 10%;
+
+}
+button{
+    width: 260px;
+    margin-left: 10%;
+}
